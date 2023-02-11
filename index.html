@@ -14,7 +14,7 @@
 <body>
     <div class="container border border-danger border-2 mt-5 p-5">
         <center>
-            <input type="text" id="input">
+            <input type="text" id="input" placeholder="Write and push ">
             <br>
             <h1 id="result" class="text-primary">Empty</h1>
             <br>
@@ -23,5 +23,28 @@
             <button onclick="btnPop()" class="btn btn-danger btn-lg">Pop</button>
         </center>
     </div>
+    <script>
+        let arr = new Array();
+  
+        function btnPush(){
+            let arryElement = document.getElementById("input").value;
+            arr.push(arryElement);
+            document.getElementById("result").innerHTML = arr ;
+            console.log(arr.length);
+            document.getElementById("input").value = "";
+        }
+
+        function btnSort(){
+            arr.sort(); 
+            document.getElementById("result").innerHTML = arr ;
+            console.log(arr.length);
+        }
+
+        function btnPop(){
+            arr.pop()
+            document.getElementById("result").innerHTML = arr ;
+            console.log(arr.length);
+        }
+    </script>
 </body>
 </html>
