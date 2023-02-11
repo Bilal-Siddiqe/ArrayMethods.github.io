@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
         crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="container border border-danger border-2 mt-5 p-5">
         <center>
@@ -21,30 +23,49 @@
             <button onclick="btnPush()" class="btn btn-primary btn-lg">Push</button>
             <button onclick="btnSort()" class="btn btn-warning btn-lg">Sort</button>
             <button onclick="btnPop()" class="btn btn-danger btn-lg">Pop</button>
+            <br>
+            <br>
+            <button onclick="btnUnshift()" class="btn btn-primary btn-lg">Unshift (Added)</button>
+            <button onclick="btnShift()" class="btn btn-danger btn-lg">Shift (Delete) </button>
         </center>
     </div>
     <script>
         let arr = new Array();
-  
-        function btnPush(){
+
+        function btnPush() {
             let arryElement = document.getElementById("input").value;
             arr.push(arryElement);
-            document.getElementById("result").innerHTML = arr ;
+            document.getElementById("result").innerHTML = arr;
             console.log(arr.length);
             document.getElementById("input").value = "";
         }
 
-        function btnSort(){
-            arr.sort(); 
-            document.getElementById("result").innerHTML = arr ;
+        function btnSort() {
+            arr.sort();
+            document.getElementById("result").innerHTML = arr;
             console.log(arr.length);
         }
 
-        function btnPop(){
+        function btnPop() {
             arr.pop()
-            document.getElementById("result").innerHTML = arr ;
+            document.getElementById("result").innerHTML = arr;
+            console.log(arr.length);
+        }
+
+        function btnUnshift() {
+            let arryElement = document.getElementById("input").value;
+            arr.unshift(arryElement);
+            document.getElementById("result").innerHTML = arr;
+            console.log(arr.length);
+            document.getElementById("input").value = "";
+        }
+
+        function btnShift() {
+            arr.shift()
+            document.getElementById("result").innerHTML = arr;
             console.log(arr.length);
         }
     </script>
 </body>
+
 </html>
