@@ -35,7 +35,8 @@
         function btnPush() {
             let arryElement = document.getElementById("input").value;
             arr.push(arryElement);
-            document.getElementById("result").innerHTML = arr;
+            let myJoinArry = arr.join(" ")
+            document.getElementById("result").innerHTML = myJoinArry;
             console.log(arr.length);
             document.getElementById("input").value = "";
         }
